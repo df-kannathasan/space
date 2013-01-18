@@ -1,0 +1,7 @@
+#header {
+color: white;
+background: maroon; /* No "ruby" defined in HTML color names! */
+font-size: 24pt;
+padding: 0.25em;
+margin-bottom: 0;
+}

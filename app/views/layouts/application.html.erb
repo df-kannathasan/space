@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title><%= @title %></title>
+<%= stylesheet_link_tag 'application.css' %> 
+</head>
+<body>
+<div id="whole_page">
+<div id="header">RailsSpace</div>
+<div id="nav">
+<span style="float: right">
+  <% if logged_in? -%>
+	  <%= nav_link "Hub", "user", "index" %> 
+  <%= nav_link "Logout", "user", "logout" %>
+<% else -%>
+    <%= nav_link "Register", "user", "register" %> 
+    <%= nav_link "Login",    "user", "login" %>
+  <% end -%>
+</span>
+<%= nav_link "Home",     "site" %>
+<%=  nav_link "About Us", "site", "about" %>
+<%= nav_link "Help",     "site", "help" %> 
+<%#= nav_link "Register", "user", "register" %>
+
+<%#= link_to_unless_current "Home", :controller => "site", :action => "index" %>
+<%#= link_to_unless_current "About Us",:controller => "site", :action => "about" %>
+<%#= link_to_unless_current "help",:controller => "site", :action => "help" %>
+<%#= link_to_unless_current "Register", :controller => "user", :action => "register" %>
+<div id="content">
+  <% if flash[:notice] %>
+    <div id="notice"><%= flash[:notice] %></div>
+  <% end %>
+  <%= @content_for_layout %>
+<%= yield %>
+</body>
+</html>
