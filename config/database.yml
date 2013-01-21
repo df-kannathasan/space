@@ -32,11 +32,12 @@ test:
   password: root
 
 production:
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   reconnect: false
-  database: rails_space_production
+  database: postgres-shop3
+  host: localhost
   pool: 5
-  username: root
-  password: 
+  username: postgres
+  password: root
   socket: /var/run/mysqld/mysqld.sock
