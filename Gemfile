@@ -13,13 +13,12 @@ gem 'mysql2'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
-
+gem 'heroku'
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
@@ -43,3 +42,5 @@ gem 'therubyracer'
 gem 'mysql2'
 gem 'dynamic_form'
 gem 'devise'
+gem 'libv8'
+#gem 'therubyracer', '0.10.2', :platforms => :ruby
